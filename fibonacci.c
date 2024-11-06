@@ -43,5 +43,30 @@ void fibonacci(int limit) {
     }
     printf("\n");
 }
+void prime(int limit) {
+    int count = 0;
+    printf("Prime Numbers: ");
+    for (int num = 2; count < limit; num++) {
+        int isPrime = 1;
+        for (int i = 2; i <= sqrt(num); i++) {
+            if (num % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+        if (isPrime) {
+            printf("%d ", num);
+            count++;
+        }
+    }
+    printf("\n");
+}
+void x_power_x(int limit) {
+    printf("x^x Series: ");
+    for (int x = 1; x <= limit; x++) {
+        printf("%d ", (int)pow(x, x));
+    }
+    printf("\n");
+}
 
 
